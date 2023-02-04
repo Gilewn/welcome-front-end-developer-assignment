@@ -1,0 +1,14 @@
+.transfers {
+  background: #e5e5e5;
+  margin-left: 82px;
+  padding: 33px 30px;
+}
+
+.transfers h1 {
+  margin: 0 0 32px 0;
+  color: #2d3b4e;
+  font-weight: 600;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 26px;
+}
