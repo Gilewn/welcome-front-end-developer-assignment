@@ -1,7 +1,7 @@
 import classes from './Header.module.css';
 
 import profileLogo from '../../assets/profile.svg';
-import logOutLogo from '../../assets/log_out.svg';
+import logOutLogo from '../../assets/log-out.svg';
 
 const Header = () => {
   return (
