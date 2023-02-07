@@ -1,0 +1,210 @@
+.close-btn {
+  position: absolute;
+  right: 29px;
+  top: 29px;
+  background: rgba(45, 59, 78, 0.05);
+  border-radius: 20px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.details {
+  display: flex;
+}
+
+.left-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 30%;
+}
+
+.traveler-basic-info {
+  text-align: center;
+  color: #2d3b4e;
+  padding: 53px 81px 27px;
+}
+
+.traveler-img {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.traveler-basic-info h1 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+}
+.divider {
+  background: rgba(45, 59, 78, 0.08);
+  height: 1px;
+  width: 70%;
+  margin: 0px auto 29px;
+}
+
+.horizontal-divider {
+  background: rgba(45, 59, 78, 0.08);
+  width: 1px;
+}
+
+.traveler-extra-info {
+  margin-left: 36px;
+  margin-bottom: 48px;
+}
+
+.traveler-extra-info div {
+  margin-bottom: 32px;
+}
+
+.traveler-extra-info span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(45, 59, 78, 0.5);
+  margin-bottom: 7px;
+  display: block;
+}
+
+.traveler-extra-info h1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2d3b4e;
+  margin: 0;
+}
+
+.traveler-extra-info img {
+  background-color: #f4f5f6;
+  padding: 5px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-right: 11px;
+}
+
+.right-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+  margin-left: 38px;
+  margin-right: 38px;
+}
+
+.headline {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  color: #2d3b4e;
+  margin: 43px 0px 18px;
+}
+
+.transfer-info-container {
+  background: rgba(45, 59, 78, 0.03);
+  border-radius: 6px;
+  padding: 32px;
+}
+
+.departure-date {
+  border-bottom: 1px solid #48d9a4;
+  border-radius: 1.5px;
+  width: fit-content;
+}
+
+.departure-date h1 {
+  margin: 0 0 7px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  color: #2d3b4e;
+}
+
+.transfer-info {
+  display: flex;
+  margin-top: 24px;
+}
+
+.transfer-info-details-container {
+  margin-left: 25px;
+}
+
+.transfer-info-details {
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
+
+.location-container {
+  width: 300px;
+  margin-bottom: 11px;
+}
+
+.transfer-info-details h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #2d3b4e;
+}
+
+.transfer-info-details h2 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(45, 59, 78, 0.5);
+  margin: 0;
+}
+
+.transfer-info-details span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(45, 59, 78, 0.5);
+}
+
+.flight-info-container {
+  background: rgba(45, 59, 78, 0.04);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  padding: 11px 20px;
+  width: 40%;
+  margin-bottom: 11px;
+}
+
+.flight-info-container:last-child {
+  justify-content: space-around;
+}
+
+.flight-info-container img {
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+}
+
+.flight-info-container span {
+  margin-right: 13px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(45, 59, 78, 0.5);
+}
+
+.flight-info-container h3 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0px;
+  color: #42c594;
+}
+
+.flight-info-container div {
+  background: rgba(45, 59, 78, 0.08);
+  width: 1px;
+  height: 20px;
+  margin-right: 10px;
+}

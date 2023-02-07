@@ -6,7 +6,14 @@ import { stringLengthHandler } from '../../../../shared/stringLengthHandler';
 
 import classes from './TransfersList.module.css';
 
-const TransfersList = () => {
+const TransfersList = (props) => {
+  const { onShow, getTransfer } = props;
+
+  const getTransferDetailsHandler = (transfer) => {
+    getTransfer(transfer);
+    onShow();
+  };
+
   const transfersList = groupedTransfers.map((transfers, index) => (
     <div key={index}>
       <h1 className={classes['transfer-date']}>
@@ -14,7 +21,10 @@ const TransfersList = () => {
       </h1>
       {transfers.transfer.map((transfer) => (
         <div key={transfer.id}>
-          <div className={classes['list-item']}>
+          <div
+            className={classes['list-item']}
+            onClick={() => getTransferDetailsHandler(transfer)}
+          >
             <div>{statusHandler(transfer.category.toString())}</div>
 
             <div className={classes['traveler-photo']}>

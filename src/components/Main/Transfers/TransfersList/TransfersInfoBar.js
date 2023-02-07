@@ -11,7 +11,25 @@ const TransfersInfoBar = () => {
         {literals.transfers.infoBar.arrivalDeparture}
       </p>
       <p style={{ width: '20%' }}>{literals.transfers.infoBar.fromTo}</p>
-      <p style={{ width: '20%' }}>{literals.transfers.infoBar.opportunities}</p>
+      <div style={{ width: '20%', display: 'flex', alignItems: 'center' }}>
+        <p style={{ marginRight: 4 }}>
+          {literals.transfers.infoBar.opportunities}
+        </p>
+        <p
+          style={{
+            background: '#FFC149',
+            boxShadow: '0px 1px 3px #FFC149',
+            borderRadius: '2px',
+            fontWeight: 700,
+            fontSize: '10px',
+            lineHeight: '12px',
+            color: '#FFF',
+            padding: '4px',
+          }}
+        >
+          {literals.transfers.infoBarTags.new}
+        </p>
+      </div>
     </div>
   );
 };

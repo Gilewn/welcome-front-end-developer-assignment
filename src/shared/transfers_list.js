@@ -1,7 +1,7 @@
 export const DUMMY_TRANSFERS_LIST = [
   {
     id: 1,
-    datetime: '2023-01-06T14:20:00+02:00',
+    datetime: '2023-02-08T14:20:00+02:00',
     category: 'Departure',
     traveler_photo: 'https://picsum.photos/200/300?random=1',
     traveler_first_name: 'Sergey',
@@ -15,7 +15,7 @@ export const DUMMY_TRANSFERS_LIST = [
   },
   {
     id: 2,
-    datetime: '2023-01-07T18:40:00+02:00',
+    datetime: '2023-02-10T18:40:00+02:00',
     category: 'Arrival',
     traveler_photo: 'https://picsum.photos/200/300?random=2',
     traveler_first_name: 'Pablo',

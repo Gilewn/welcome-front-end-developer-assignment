@@ -11,5 +11,11 @@ export const literals = {
     infoBarTags: {
       new: 'New',
     },
+    details: {
+      phone: 'Phone number',
+      email: 'Email',
+      comingFrom: 'Coming from',
+      opportunities: 'Opportunities',
+    },
   },
 };

@@ -32,14 +32,14 @@ export const dateHandler = (date, full) => {
 
     if (
       today.getDate() === transferDate.getDate() &&
-      today.getMonth() === transferDate.getMonth() + 1 &&
+      today.getMonth() === transferDate.getMonth() &&
       today.getFullYear() === transferDate.getFullYear()
     ) {
       transferDay = 'Today';
       return transferDay;
     } else if (
       today.getDate() - transferDate.getDate() === -1 &&
-      today.getMonth() === transferDate.getMonth() + 1 &&
+      today.getMonth() === transferDate.getMonth() &&
       today.getFullYear() === transferDate.getFullYear()
     ) {
       transferDay = 'Tomorrow';
@@ -49,7 +49,7 @@ export const dateHandler = (date, full) => {
         ? weekday[transferDate.getDay()].substring(0, 3)
         : weekday[transferDate.getDay()] +
           ', ' +
-          (transferDate.getDay() + 1) +
+          transferDate.getDate() +
           ' ' +
           monthNames[transferDate.getMonth()];
       return transferDay;
@@ -62,7 +62,7 @@ export const dateHandler = (date, full) => {
     formattedDate =
       getWeekDayHandler() +
       ', ' +
-      (transferDate.getDay() + 1) +
+      transferDate.getDate() +
       ' ' +
       monthNames[transferDate.getMonth()] +
       ', ' +
