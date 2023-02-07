@@ -4,6 +4,7 @@ import Modal from '../../../UI/Modal';
 
 import { literals } from '../../../../shared/literals';
 import { DUMMY_TRANSFERS_DETAILS } from '../../../../shared/transfers_details';
+import { DUMMY_TRANSFERS_LIST } from '../../../../shared/transfers_list';
 import { opportunitiesHandler } from '../../../../shared/opportunitiesHandler';
 import { dateHandler } from '../../../../shared/dateHandler';
 
@@ -15,11 +16,13 @@ import handLuggageLogo from '../../../../assets/hand-luggage.svg';
 import takeOffLogo from '../../../../assets/takeoff-icon.svg';
 import timeIconLogo from '../../../../assets/time-icon.svg';
 import closeLogo from '../../../../assets/x-icon.svg';
+import leftArrow from '../../../../assets/left-arrow.svg';
+import rightArrow from '../../../../assets/right-arrow.svg';
 
 import classes from './TransferDetails.module.css';
 
 const TransferDetails = (props) => {
-  const { transfer, onClose } = props;
+  const { transfer, onClose, onSetTransfer } = props;
   const [transferDetails, setTransferDetails] = useState();
   let layout;
 
@@ -31,6 +34,34 @@ const TransferDetails = (props) => {
     );
   }, [transfer]);
 
+  const transferDetailsSliderHandler = (transferId, type) => {
+    if (type === 'next' && transferId !== 6) {
+      const nextTransferDetails = DUMMY_TRANSFERS_DETAILS.find(
+        (transfer) => transfer.id === transferId + 1
+      );
+
+      const nextTransfer = DUMMY_TRANSFERS_LIST.find(
+        (transfer) => transfer.id === transferId + 1
+      );
+
+      setTransferDetails(nextTransferDetails);
+      onSetTransfer(nextTransfer);
+    }
+
+    if (type === 'prev' && transferId !== 1) {
+      const prevTransferDetails = DUMMY_TRANSFERS_DETAILS.find(
+        (transfer) => transfer.id === transferId - 1
+      );
+
+      const prevTransfer = DUMMY_TRANSFERS_LIST.find(
+        (transfer) => transfer.id === transferId - 1
+      );
+
+      setTransferDetails(prevTransferDetails);
+      onSetTransfer(prevTransfer);
+    }
+  };
+
   if (transferDetails) {
     layout = (
       <div className={classes.details}>
@@ -39,6 +70,32 @@ const TransferDetails = (props) => {
           alt='close logo'
           className={classes['close-btn']}
           onClick={onClose}
+        />
+        <img
+          src={leftArrow}
+          alt='left arrow'
+          className={classes['left-arrow']}
+          onClick={() =>
+            transferDetailsSliderHandler(transferDetails.id, 'prev')
+          }
+          style={{
+            backgroundColor:
+              transferDetails.id === 1 && 'rgb(255 255 255 / 30%)',
+            cursor: transferDetails.id === 1 && 'not-allowed',
+          }}
+        />
+        <img
+          src={rightArrow}
+          alt='right arrow'
+          className={classes['right-arrow']}
+          onClick={() =>
+            transferDetailsSliderHandler(transferDetails.id, 'next')
+          }
+          style={{
+            backgroundColor:
+              transferDetails.id === 6 && 'rgb(255 255 255 / 30%)',
+            cursor: transferDetails.id === 6 && 'not-allowed',
+          }}
         />
         <div className={classes['left-pane']}>
           <div className={classes['traveler-basic-info']}>
@@ -134,15 +191,17 @@ const TransferDetails = (props) => {
               <img src={handLuggageLogo} alt='hand luggage logo' />
               <span>{transferDetails.hand_luggage}</span>
             </div>
-            <div className={classes['flight-info-container']}>
-              <img src={takeOffLogo} alt='take off logo' />
-              <span>{transferDetails.flight_status.flight_number}</span>
-              <div />
-              <img src={timeIconLogo} alt='time icon logo' />
-              <span>{transferDetails.flight_status.flight_time}</span>
-              <div />
-              <h3>{transferDetails.flight_status.flight_status}</h3>
-            </div>
+            {transferDetails.flight_status && (
+              <div className={classes['flight-info-container']}>
+                <img src={takeOffLogo} alt='take off logo' />
+                <span>{transferDetails.flight_status.flight_number}</span>
+                <div />
+                <img src={timeIconLogo} alt='time icon logo' />
+                <span>{transferDetails.flight_status.flight_time}</span>
+                <div />
+                <h3>{transferDetails.flight_status.flight_status}</h3>
+              </div>
+            )}
           </div>
         </div>
       </div>

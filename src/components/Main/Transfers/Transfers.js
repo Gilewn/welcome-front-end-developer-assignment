@@ -24,7 +24,11 @@ const Transfers = () => {
   return (
     <div className={classes.transfers}>
       {showTransferDetails && (
-        <TransferDetails transfer={transfer} onClose={hideModalHandler} />
+        <TransferDetails
+          transfer={transfer}
+          onClose={hideModalHandler}
+          onSetTransfer={setTransfer}
+        />
       )}
       <h1 className={classes.headline}>
         {literals.transfers.transfersHeadline}

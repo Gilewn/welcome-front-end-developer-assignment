@@ -8,6 +8,26 @@
   cursor: pointer;
 }
 
+.left-arrow,
+.right-arrow {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.left-arrow {
+  left: -65px;
+}
+
+.right-arrow {
+  right: -65px;
+}
+
 .details {
   display: flex;
 }
