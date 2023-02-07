@@ -1,0 +1,27 @@
+.pagination {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination img,
+.pagination div {
+  padding: 13px;
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  box-shadow: 0px 1px 1px rgba(45, 59, 78, 0.06);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(45, 59, 78, 0.5);
+}
+
+.pagination div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

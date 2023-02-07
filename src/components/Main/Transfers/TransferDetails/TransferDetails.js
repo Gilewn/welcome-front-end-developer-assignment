@@ -148,7 +148,7 @@ const TransferDetails = (props) => {
       </div>
     );
   } else {
-    layout = <p>Loading</p>;
+    layout = <p>Loading...</p>;
   }
 
   return <Modal onClose={onClose}>{layout}</Modal>;

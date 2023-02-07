@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TransfersInfoBar from './TransfersList/TransfersInfoBar';
 import TransfersList from './TransfersList/TransfersList';
 import TransferDetails from './TransferDetails/TransferDetails';
+import Pagination from '../../UI/Pagination';
 
 import { literals } from '../../../shared/literals';
 
@@ -30,6 +31,7 @@ const Transfers = () => {
       </h1>
       <TransfersInfoBar />
       <TransfersList onShow={showModalHandler} getTransfer={setTransfer} />
+      <Pagination />
     </div>
   );
 };
