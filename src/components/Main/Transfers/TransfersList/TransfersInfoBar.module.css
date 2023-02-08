@@ -18,3 +18,9 @@
   letter-spacing: 0.88px;
   margin: 0px;
 }
+
+@media (max-width: 1024px) {
+  .info-bar {
+    display: none;
+  }
+}

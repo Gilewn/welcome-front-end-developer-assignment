@@ -12,6 +12,35 @@
   margin-right: 6px;
 }
 
-.header:last-child {
+.header-nav {
   margin-right: 13px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile h1 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2d3b4e;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header {
+    box-shadow: 0px 0px 8px rgba(45, 59, 78, 0.1);
+    border-radius: 0px 8px 8px 0px;
+    padding: 0 20px;
+  }
 }

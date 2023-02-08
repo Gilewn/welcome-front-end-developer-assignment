@@ -5,11 +5,38 @@ import inCityLogo from '../assets/in-city.svg';
 export const statusHandler = (status) => {
   switch (status) {
     case 'Departure':
-      return <img src={departingLogo} alt='departing logo' />;
+      return (
+        <section
+          style={{
+            backgroundColor: '#FE6685',
+          }}
+        >
+          <img src={departingLogo} alt='departing logo' />
+          <h3>Departing</h3>
+        </section>
+      );
     case 'Arrival':
-      return <img src={arrivingLogo} alt='arriving logo' />;
+      return (
+        <section
+          style={{
+            backgroundColor: '#56a7fa',
+          }}
+        >
+          <img src={arrivingLogo} alt='arriving logo' />
+          <h3>Arriving</h3>
+        </section>
+      );
     case 'In City':
-      return <img src={inCityLogo} alt='in city logo' />;
+      return (
+        <section
+          style={{
+            backgroundColor: '#736BFF',
+          }}
+        >
+          <img src={inCityLogo} alt='in city logo' />
+          <h3>In City</h3>
+        </section>
+      );
     default:
       break;
   }
