@@ -228,3 +228,154 @@
   height: 20px;
   margin-right: 10px;
 }
+
+.mobile-header,
+.mobile-divider,
+.mobile-guest-header,
+.mobile-traveler-basic-info,
+.mobile-com-btns {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .left-arrow,
+  .right-arrow,
+  .headline {
+    display: none;
+  }
+
+  .details {
+    flex-direction: column-reverse;
+  }
+
+  .mobile-header {
+    background: rgba(45, 59, 78, 0.04);
+    border-radius: 12px 12px 0px 0px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+  }
+
+  .mobile-header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(45, 59, 78, 0.5);
+  }
+
+  .close-btn {
+    right: 20px;
+    top: 1.5%;
+    z-index: 21;
+  }
+
+  .right-pane {
+    width: 100%;
+    margin: 90px 0px 0px;
+  }
+
+  .transfer-info-container {
+    background-color: #fff;
+  }
+
+  .transfer-info-details-container,
+  .location-container,
+  .transfer-info-details {
+    width: 100%;
+  }
+
+  .flight-info-container {
+    width: auto;
+    border: 1px solid rgba(45, 59, 78, 0.08);
+    background-color: #fff;
+  }
+
+  .mobile-divider {
+    display: block;
+    background: rgba(45, 59, 78, 0.08);
+    height: 1px;
+    width: 90%;
+    margin: 32px auto;
+  }
+
+  .transfer-info {
+    margin-bottom: 28px;
+  }
+
+  .mobile-guest-header {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2d3b4e;
+    margin-left: 32px;
+    margin-bottom: 20px;
+  }
+
+  .left-pane {
+    width: auto;
+  }
+
+  .traveler-basic-info {
+    padding: 0;
+    display: flex;
+    margin-left: 32px;
+    margin-bottom: 18px;
+  }
+
+  .traveler-img {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+
+  .mobile-traveler-basic-info {
+    display: block;
+  }
+
+  .mobile-traveler-basic-info h2 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(45, 59, 78, 0.5);
+  }
+
+  .mobile-exception {
+    display: none;
+  }
+
+  .traveler-extra-info {
+    margin-bottom: 26px;
+  }
+
+  .traveler-extra-info div {
+    margin-bottom: 0;
+  }
+
+  .mobile-com-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+  }
+
+  .mobile-com-btns div {
+    display: inherit;
+    background: rgba(45, 59, 78, 0.05);
+    border-radius: 4px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+  .mobile-com-btns h1 {
+    margin: 0 0 0 12px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2d3b4e;
+  }
+}

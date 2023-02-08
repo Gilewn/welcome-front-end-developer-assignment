@@ -18,6 +18,8 @@ import timeIconLogo from '../../../../assets/time-icon.svg';
 import closeLogo from '../../../../assets/x-icon.svg';
 import leftArrow from '../../../../assets/left-arrow.svg';
 import rightArrow from '../../../../assets/right-arrow.svg';
+import phoneLogo from '../../../../assets/phone-icon.svg';
+import chatLogo from '../../../../assets/chat.svg';
 
 import classes from './TransferDetails.module.css';
 
@@ -97,27 +99,39 @@ const TransferDetails = (props) => {
             cursor: transferDetails.id === 6 && 'not-allowed',
           }}
         />
+        <div className={classes['mobile-header']}>
+          <h1>{`${transfer.traveler_first_name}'s trip`} </h1>
+        </div>
         <div className={classes['left-pane']}>
+          <h1 className={classes['mobile-guest-header']}>Your guest</h1>
           <div className={classes['traveler-basic-info']}>
             <img
               src={transfer.traveler_photo}
               alt={transfer.traveler_photo}
               className={classes['traveler-img']}
             />
-            <h1>{transfer.traveler_first_name}</h1>
-            <h1>{transfer.traveler_last_name}</h1>
+            <div>
+              <div>
+                <h1>{transfer.traveler_first_name}</h1>
+                <h1>{transfer.traveler_last_name}</h1>
+              </div>
+              <div className={classes['mobile-traveler-basic-info']}>
+                <h2>{transferDetails.traveler.phone_number}</h2>
+                <h2>From {transferDetails.traveler.country}</h2>
+              </div>
+            </div>
           </div>
           <div className={classes.divider} />
           <div className={classes['traveler-extra-info']}>
-            <div>
+            <div className={classes['mobile-exception']}>
               <span>{literals.transfers.details.phone}</span>
               <h1>{transferDetails.traveler.phone_number}</h1>
             </div>
-            <div>
+            <div className={classes['mobile-exception']}>
               <span>{literals.transfers.details.email}</span>
               <h1>{transferDetails.traveler.email}</h1>
             </div>
-            <div>
+            <div className={classes['mobile-exception']}>
               <span>{literals.transfers.details.comingFrom}</span>
               <h1>{transferDetails.traveler.country}</h1>
             </div>
@@ -134,8 +148,19 @@ const TransferDetails = (props) => {
               ))}
             </div>
           </div>
+          <div className={classes['mobile-com-btns']}>
+            <div>
+              <img src={phoneLogo} alt='phone logo' />
+              <h1>Call</h1>
+            </div>
+            <div>
+              <img src={chatLogo} alt='chat logo' />
+              <h1>Message</h1>
+            </div>
+          </div>
         </div>
         <div className={classes['horizontal-divider']} />
+        <div className={classes['mobile-divider']} />
         <div className={classes['right-pane']}>
           <h1 className={classes.headline}>
             {literals.transfers.transfersHeadline}
